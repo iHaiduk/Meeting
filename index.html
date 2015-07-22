@@ -11,23 +11,42 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="animate500 background1">
 <main class="site-wrapper">
 
     <section id="left-sidebar">
 
         <div class="logo">
-            <a href="#intro" class="link-scroll"><img src="assets/images/other_images/logo.png" alt="Twilli Air"></a>
+            <img src="img/logo.png">
+        </div>
+
+        <div class="search">
+            <input type="search" class="animate500" placeholder="Search..." />
+            <i class="fa fa-search animate500"></i>
         </div><!-- .logo -->
 
-        <ul id="main-menu" class="menu_closed_on_xs" style="display: inline-block;">
-            <li id="menu-item-text" class="menu-item scroll"><a href="#text">Text</a></li>
-            <li id="menu-item-carousel" class="menu-item scroll"><a href="#carousel">Carousel</a></li>
-            <li id="menu-item-grid" class="menu-item scroll"><a href="#grid">Grid</a></li>
-            <li id="menu-item-featured" class="menu-item scroll"><a href="#featured">Featured</a></li>
-            <li id="menu-item-tabs" class="menu-item scroll"><a href="#tabs">Tabs</a></li>
-            <li id="menu-item-contact" class="menu-item scroll"><a href="#contact">Contact</a></li>
+        <ul id="main-menu">
+            <li id="menu-item-text"><a href="#text">Text</a></li>
+            <li id="menu-item-carousel"><a href="#carousel">Carousel</a></li>
+            <li id="menu-item-grid"><a href="#grid">Grid</a></li>
+            <li id="menu-item-featured"><a href="#featured">Featured</a></li>
+            <li id="menu-item-tabs"><a href="#tabs">Tabs</a></li>
+            <li id="menu-item-contact"><a href="#contact">Contact</a></li>
         </ul><!-- #main-menu -->
+
+        <ul id="chat-user">
+            <li class="menu-item scroll">
+                <a href="#text">
+                    <div class="avatar">
+                        <img src="">
+                    </div>
+                    <div class="info">
+                        <div class="name"></div>
+                        <div class="text"></div>
+                    </div>
+                </a>
+            </li>
+        </ul><!-- #chat-user -->
 
     </section>
 
