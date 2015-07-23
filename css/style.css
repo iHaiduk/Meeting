@@ -33,7 +33,10 @@ body {
     bottom: 0;
     margin: 0;
     padding: 0;
-    font-family: "casperbold", "Georgia", sans-serif;
+    font-family: "casperregular", "Georgia", sans-serif;
+}
+body * {
+    font-family: "casperregular", "Georgia", sans-serif;
 }
 
 body.background1{
@@ -59,7 +62,6 @@ body.background2{
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
-    background: white;
     -webkit-box-shadow: 0px 0px 20px 1px rgba(10,9,10,0.75);
     -moz-box-shadow: 0px 0px 20px 1px rgba(10,9,10,0.75);
     box-shadow: 0px 0px 20px 1px rgba(10,9,10,0.75);
@@ -136,6 +138,10 @@ body.background2{
     list-style: none;
     padding-left: 0;
 }
+#left-sidebar #chat-user{
+    overflow: hidden;
+    max-height: calc(100% - 305px);
+}
 #left-sidebar #main-menu:after{
     content: "";
     width: 100%;
@@ -151,6 +157,7 @@ body.background2{
     cursor: pointer;
     padding-left: 30px;
     padding-top: 2px;
+    position: relative;
 }
 #left-sidebar #main-menu li a{
     text-transform: uppercase;
@@ -160,26 +167,98 @@ body.background2{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.7);
 }
+#left-sidebar #main-menu li .badge{
+    vertical-align: inherit;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    right: 30px;
+    position: absolute;
+    color: #DF836F;
+    padding: 3px 5px 2px 5px;
+    min-width: 18px;
+    top: 4px;
+}
 #left-sidebar #main-menu li:hover{
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 #left-sidebar #main-menu li:hover a{
     color: rgba(255, 255, 255, 0.95);
 }
 
+
 #chat-user{
-    margin-top: 50px;
+    margin-top: 45px;
 }
 #chat-user li{
-    margin-left: 20px;
+    padding: 10px 0 10px 20px;
+    position: relative;
+    display: block;
+    height: 80px;
+    cursor: pointer;
+}
+#chat-user li:hover{
+    background-color: rgba(255, 255, 255, 0.1);
 }
 #chat-user li .avatar{
+    display: inline-block;
     width: 35px;
     height: 35px;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
+    position: absolute;
+    top: 15px;
 }
+#chat-user li:hover  .avatar{
+    border-radius: 15%;
+}
+#chat-user li .info{
+    display: inline-block;
+    width: 130px;
+    position: absolute;
+    left: 67px;
+    letter-spacing: 1px;
+}
+#chat-user li .info .name{
+    display: inline-block;
+    width: 136px;
+    overflow: hidden;
+    height: 18px;
+    margin-left: -3px;
+    padding-left: 3px;
+    margin-bottom: -3px;
+    border-bottom: 1px solid rgba(236, 236, 236, 0.4);
+}
+#chat-user li .info .text{
+    font-size: 11px;
+    text-align: justify;
+    line-height: 10px;
+    height: 40px;
+    overflow: hidden;
+    letter-spacing: 0;
+}
+
+#site-wrapper-inner{
+    left: 210px;
+    background: white;
+    position: absolute;
+    width: calc(100% - 210px);
+    height: 100%;
+}
+#site-wrapper-inner .col-md-4{
+    padding-left: 40px;
+}
+#site-wrapper-inner .page-header{
+    height: 70px;
+    top: 0;
+    margin: 0;
+}
+#site-wrapper-inner .page-header-name{
+    font-size: 26px;
+    margin-top: 50px;
+}
+
+
 .footer{
     display: block;
     position: relative;
