@@ -257,7 +257,21 @@ body.background2{
     font-size: 26px;
     margin-top: 50px;
 }
-
+#site-wrapper-inner .page-header-name .sort{
+    float: right;
+}
+#site-wrapper-inner .page-header-name .sort .btn{
+    padding: 6px 8px;
+    border-radius: 50%;
+    line-height: 1;
+    background: white;
+    border-color: #C9CED7;
+    color: #C9CED7;
+}
+#site-wrapper-inner .page-header-name .sort .btn:hover{
+    border-color: #9399a5;
+    color: #9399a5;
+}
 
 .footer{
     display: block;
