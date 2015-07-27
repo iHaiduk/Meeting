@@ -74,6 +74,7 @@ body.background2{
     background-repeat: no-repeat;
     height: 100%;
     background-size: cover;
+    z-index: 1;
 }
 #left-sidebar .logo{
     bottom: 0;
@@ -134,7 +135,7 @@ body.background2{
 #left-sidebar .search input:focus:-ms-input-placeholder { opacity:0; }
 
 /** Menu */
-#left-sidebar #main-menu, #left-sidebar #chat-user{
+#main-menu, #chat-user, #rooms{
     list-style: none;
     padding-left: 0;
 }
@@ -272,6 +273,193 @@ body.background2{
     border-color: #9399a5;
     color: #9399a5;
 }
+
+#rooms .room-head{
+    display: block;
+    height: 25px;
+}
+#rooms .room-head .left{
+    display: inline-block;
+    float: left;
+}
+#rooms .room-head .right{
+    display: inline-block;
+    float: right;
+}
+#rooms .room-users .slider .element{
+    display: inline-block;
+    height: 95px;
+    width: 18%;
+    margin: 0 1%;
+    background-size: cover;
+    background-position: center;
+}
+
+#site-wrapper-inner{
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    -ms-transition: all 500ms ease-in;
+    -o-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+}
+#site-wrapper-inner .video{
+    height: 100%;
+}
+
+#site-wrapper-inner .video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 101%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: black;
+    background-size: cover;
+    -webkit-transition: 1s opacity;
+    transition: 1s opacity;
+}
+
+#circle{
+    position: absolute;
+    top: 0;
+    width: calc(100% - 210px);
+    height: 100%;
+    z-index: 1;
+    left: 225px;
+}
+#circle .col-md-12{
+    position: relative;
+    height: 100%;
+}
+#circle .col-md-12:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/bgAdventure.png);
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    -ms-transition: all 500ms ease-in;
+    -o-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+}
+#circle .adventure-scale{
+    align-content: center;
+    align-items: center;
+    width: 370px;
+    height: 370px;
+    left: 50%;
+    margin-left: -155px;
+    margin-top: -155px;
+    top: 50%;
+    position: absolute;
+}
+#circle .adventure-scale svg{
+    opacity: 0;
+}
+#circle:hover .col-md-12:before{
+    opacity: 1;
+}
+#circle:hover .adventure-scale svg{
+    opacity: 1;
+}
+#circle:hover + #site-wrapper-inner{
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+}
+#circle .adventure-timeline {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 320px;
+    height: 320px;
+    margin: -130px 0 0 -130px;
+}
+
+#circle .adventure-timeline .timeline-status {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    overflow: hidden
+}
+
+#circle .adventure-timeline .timeline-status .timeline-status-line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: rotate(0deg);
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    -ms-transition: all 500ms ease-in;
+    -o-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+}
+
+#circle .adventure-timeline .timeline-status .timeline-status-line:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 1000px;
+    border: 4px solid #FFFFFF;
+    border-radius: 400px
+}
+
+#circle .adventure-timeline .timeline-status--left {
+    top: 0;
+    left: 0
+}
+
+#circle .adventure-timeline .timeline-status--left .timeline-status-line {
+    right: -100%;
+    -webkit-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center
+}
+
+#circle .adventure-timeline .timeline-status--left .timeline-status-line:after {
+    right: 0
+}
+
+#circle .adventure-timeline .timeline-status--right {
+    top: 0;
+    right: 0
+}
+
+#circle .adventure-timeline .timeline-status--right .timeline-status-line {
+    left: -100%;
+    -webkit-transform-origin: right center;
+    -ms-transform-origin: right center;
+    transform-origin: right center
+}
+
+#circle .adventure-timeline .timeline-status--right .timeline-status-line:after {
+    left: 0
+}
+
+#circle .adventure-timeline {
+    -webkit-transition: all .5s cubic-bezier(0.6,-.28,.735,.045);
+    transition: all .5s cubic-bezier(0.6,-.28,.735,.045)
+}
+#circle:hover .adventure-timeline .timeline-status .timeline-status-line{
+    transform: rotate(180deg);
+}
+
+
+
 
 .footer{
     display: block;
